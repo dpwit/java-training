@@ -15,13 +15,13 @@ public class SumFun {
 
         while(input >= 0) {
             sum += input; //same as sum = sum + input
-            System.out.println("Please enter a non-negative integer to sum together,");
+            System.out.println("Please enter another non-negative integer to sum together,");
             System.out.println("or enter a negative integer to end the calculation!");
 
             input = keyboard.nextInt();
         } // end while loop
 
 
-        System.out.println("Sum is " + sum);
+        System.out.println("Sum of all non-negative integers is " + sum);
     } // end main
 }
