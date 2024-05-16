@@ -9,9 +9,12 @@ public class Proj3_1_LearningPackages {
         int package1 = 10;
         int package2 = 12;
         int package3 = 15;
-        int course1 = 6;
-        int course2 = 4;
-        int course3 = 3;
+        int courseInc1 = 2;
+        int courseInc2 = 4;
+        int courseInc3 = 6;
+        int courseExt1 = 6;
+        int courseExt2 = 4;
+        int courseExt3 = 3;
 
         System.out.println("What package would you like?");
         System.out.println("Package 1");
@@ -32,7 +35,7 @@ public class Proj3_1_LearningPackages {
             System.out.println("Your total cost is " +  package1);
         }
         else if(packagePlan == 1 && courses > 2){
-            System.out.println("Your total cost is " + (package1 + (course1 * (courses -2))));
+            System.out.println("Your total cost is " + (package1 + (courseExt1 * (courses - courseInc1))));
 
         }
         else if(packagePlan == 2 && courses <= 4){
@@ -40,7 +43,7 @@ public class Proj3_1_LearningPackages {
 
         }
         else if(packagePlan == 2 && courses > 4){
-            System.out.println("Your total cost is " + (package2 + (course2 * (courses -4))));
+            System.out.println("Your total cost is " + (package2 + (courseExt2 * (courses - courseInc2))));
 
         }
         else if(packagePlan == 3 && courses <= 6){
@@ -48,7 +51,7 @@ public class Proj3_1_LearningPackages {
 
         }
         else if(packagePlan == 3 && courses > 6){
-            System.out.println("Your total cost is " + (package3 + (course3 * (courses -6))));
+            System.out.println("Your total cost is " + (package3 + (courseExt3 * (courses - courseInc3))));
 
         }
         else {
