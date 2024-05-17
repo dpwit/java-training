@@ -14,10 +14,10 @@ public class Proj3_2_DivisibleByThree {
         divisibleThree = keyboard.nextInt();
 
         if(divisibleThree % 3 == 0) {
-            System.out.println("This integer is divisible by 3, well done!");
+            System.out.println(divisibleThree + " This integer is divisible by 3, well done!");
         }
         else {
-            System.out.println("This is integer is NOT divisible by 3, unfortunately!");
+            System.out.println(divisibleThree + " This is integer is NOT divisible by 3, unfortunately!");
         }
 
     } // end main
