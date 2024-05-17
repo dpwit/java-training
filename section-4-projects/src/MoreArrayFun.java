@@ -1,8 +1,6 @@
 public class MoreArrayFun {
     public static void main(String[] args) {
-        int[] myArray;
-
-        myArray = new int[10];
+        int[] myArray = new int[10];
 
         // for loop
         for(int i = 0; i < myArray.length; i++) {
