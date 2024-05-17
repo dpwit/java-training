@@ -8,7 +8,7 @@ public class MoreArrayFun {
         } // end for
 
         // enhance for loop
-        for(int num :myArray) {
+        for(int num : myArray) {
             System.out.println(num);
         }
 

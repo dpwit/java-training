@@ -7,6 +7,9 @@
 // where the piece of data in a call is located, is referenced by the 'index'
 // declare an array, using the 'new' operator.
 
+// arrays are fixed once set.
+// ArrayLists can grow in size and can re-size.
+
 public class ArrayFun {
     public static void main(String[] args) {
         // create (declare) an array reference
