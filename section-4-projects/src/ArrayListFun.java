@@ -11,12 +11,16 @@ public class ArrayListFun {
         ArrayList<String> namesList; // ArrayList can only be reference types like String. You can't uae an int in ArrayList
         namesList = new ArrayList<>(); // we don't need to specify a size of the array for ArrayList, unlike array, as ArrayList can resize!
 
+        ArrayList<int> myNamesList = new ArrayList<int>(); // You can't use an int primitive type in an ArrayList (see the error), only reference types like String
+
+        // We will see a good work-around in the next lesson - see that!
+
         namesList.add("Darren");
         namesList.add("Jules");
         namesList.add("Kate");
         namesList.add("John");
 
-        //for loop
+        //for loop - loops through array
 //        for(int i = 0; i < namesList.size(); i++) {
 //            System.out.println(namesList.get(i));
 //        }
