@@ -1,3 +1,5 @@
+// prompt the user to enter 5 integer values and then double value and print out the results.
+
 import java.util.Scanner; // needed for keyboard input
 
 public class Proj4_1_Arrays {
