@@ -15,7 +15,6 @@ public class ArrayFun {
         // create (declare) an array reference
         int [] myArray;
 
-        // initialise new array
         myArray = new int[5]; // 5 = no. of cells in array
         // once the array size is set, it is fixed and you can't change it later.
 
