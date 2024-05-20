@@ -23,6 +23,7 @@ public class StringMethods1 {
             System.out.println("Names aren't equal");
         } // end if else
 
+        // .compareTo
         if(name4.compareTo(name2) > 0 ) { // char value of characters
             System.out.println("name > name3");
         }
