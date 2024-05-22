@@ -1,3 +1,5 @@
+// String objects are immutable - meaning they cannot be modified.
+
 public class StringMethods1 {
     public static void main(String[] args) {
         String name = "John Baugh";
