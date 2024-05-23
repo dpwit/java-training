@@ -11,9 +11,9 @@ import java.sql.SQLOutput;
 public class methodsDemo {
 
     // void, main method
-    public static void main(String[] args) // header of the method main
+    public static void main(String[] args) // header of the method main definition
     {
-        // body of the method
+        // body of the method definition
         printHello();
         printNumber(10); // 10 is an argument, passed into the parameter
         int result = giveMe10();
