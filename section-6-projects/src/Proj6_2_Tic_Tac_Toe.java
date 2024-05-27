@@ -1,11 +1,11 @@
-import java.util.Scanner;
+import java.util.Scanner; // needed for user input
 
 public class Proj6_2_Tic_Tac_Toe {
-    static char[][] board = new char[3][3];
+    static char[][] board = new char[3][3]; // creates new 3 x 3 board
 
     public static void main(String[] args) {
         initializeBoard();
-        playGame();
+        playGame(); // calls the method playGame which has the primary loop in it.
     }
 
     public static void initializeBoard() {
@@ -29,8 +29,9 @@ public class Proj6_2_Tic_Tac_Toe {
     public static void playGame() {
         boolean player1Turn = true;
         boolean gameEnded = false;
-        Scanner scanner = new Scanner(System.in);
+        Scanner keyboard = new Scanner(System.in);
 
+        // while loop
         while (!gameEnded) {
             printBoard();
             char currentPlayer = player1Turn ? 'X' : 'O';
@@ -41,9 +42,9 @@ public class Proj6_2_Tic_Tac_Toe {
 
             while (true) {
                 System.out.print("Enter row (0, 1, or 2): ");
-                row = scanner.nextInt();
+                row = keyboard.nextInt();
                 System.out.print("Enter column (0, 1, or 2): ");
-                col = scanner.nextInt();
+                col = keyboard.nextInt();
 
                 if (row < 0 || col < 0 || row >= 3 || col >= 3) {
                     System.out.println("This position is off the bounds of the board! Try again.");
@@ -65,10 +66,10 @@ public class Proj6_2_Tic_Tac_Toe {
             } else {
                 player1Turn = !player1Turn;
             }
-        }
+        } // end while loop
 
         printBoard();
-        scanner.close();
+        keyboard.close();
     }
 
     public static boolean isBoardFull() {
