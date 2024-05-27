@@ -1,47 +1,111 @@
-// Tic Tac Toe 'noughts and crosses' game application
-// check out the resource file
-
-// multiple methods to break the code into smaller sizes
-
+import java.util.Scanner;
 
 public class Proj6_2_Tic_Tac_Toe {
+    static char[][] board = new char[3][3];
+
     public static void main(String[] args) {
+        initializeBoard();
+        playGame();
+    }
 
-    } // end main method
+    public static void initializeBoard() {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                board[i][j] = '-';
+            }
+        }
+    }
 
-    // this is the game loop
-    public static void runGame() {
+    public static void printBoard() {
+        System.out.println("Board:");
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.print(board[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
 
-    } // end runGame method
+    public static void playGame() {
+        boolean player1Turn = true;
+        boolean gameEnded = false;
+        Scanner scanner = new Scanner(System.in);
 
-    // initialiseGame sets the cells of a 2D array to spaces
-    public static void initialiseGame(String[] gameBoard) {
+        while (!gameEnded) {
+            printBoard();
+            char currentPlayer = player1Turn ? 'X' : 'O';
+            System.out.println("Player " + currentPlayer + "'s turn:");
 
-    } // end initialiseGame method
+            int row = -1;
+            int col = -1;
 
-    // printGameBoard = prints whatever is in the current board game
-    public static void printBoardGame(String[] gameBoard){
+            while (true) {
+                System.out.print("Enter row (0, 1, or 2): ");
+                row = scanner.nextInt();
+                System.out.print("Enter column (0, 1, or 2): ");
+                col = scanner.nextInt();
 
-    } // end printGameBoard method
+                if (row < 0 || col < 0 || row >= 3 || col >= 3) {
+                    System.out.println("This position is off the bounds of the board! Try again.");
+                } else if (board[row][col] != '-') {
+                    System.out.println("Someone has already made a move at this position! Try again.");
+                } else {
+                    break;
+                }
+            }
 
-    // getUserInput = gets the user input and if valid, sets the current game board accordingly
-    public static void getUserInput(boolean xTurn, String[] gameBoard) {
+            board[row][col] = currentPlayer;
 
-    } // end getUserInput method
+            if (hasWon(currentPlayer)) {
+                gameEnded = true;
+                System.out.println("Player " + currentPlayer + " has won!");
+            } else if (isBoardFull()) {
+                gameEnded = true;
+                System.out.println("The game ended in a tie!");
+            } else {
+                player1Turn = !player1Turn;
+            }
+        }
 
-    // cellAlreadyOccupied = checks whether the chosen cell already has a value stored in it, and returns true if the cell is occupied.
-    public static boolean cellAlreadyOccupied(int row, int col, String[] gameBoard) {
+        printBoard();
+        scanner.close();
+    }
+
+    public static boolean isBoardFull() {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (board[i][j] == '-') {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    public static boolean hasWon(char player) {
+        // Check rows
+        for (int i = 0; i < 3; i++) {
+            if (board[i][0] == player && board[i][1] == player && board[i][2] == player) {
+                return true;
+            }
+        }
+
+        // Check columns
+        for (int j = 0; j < 3; j++) {
+            if (board[0][j] == player && board[1][j] == player && board[2][j] == player) {
+                return true;
+            }
+        }
+
+        // Check diagonals
+        if (board[0][0] == player && board[1][1] == player && board[2][2] == player) {
+            return true;
+        }
+
+        if (board[0][2] == player && board[1][1] == player && board[2][0] == player) {
+            return true;
+        }
+
         return false;
-    } // end cellAlready Occupied method
-
-    // getWinner = returns 'X' or 'O' if there is a clear winner or '' a space if there is no winner yet
-    public static String getWinner(String[] gameBoard) {
-        return "";
-    } // enf getWinner method
-
-    // isBoardFull = returns if the board is full or not
-    public static boolean isBoardsFull(String[] gameBoard) {
-        return false;
-    } // end isBoardFull method
-
-} // end class.
+    }
+}
