@@ -6,11 +6,11 @@ public class RectangleDemo {
 
         System.out.println(Rectangle.getNumRectangles());
 
-        Rectangle recFour;
+        Rectangle recFour; // recFour declared
 
         System.out.println("After recFour declared: " + Rectangle.getNumRectangles());
 
-        recFour = new Rectangle(20, 5.75);
+        recFour = new Rectangle(20, 5.75); // recFour initialised.
 
         System.out.println("After recFour initialised: " + Rectangle.getNumRectangles());
 
