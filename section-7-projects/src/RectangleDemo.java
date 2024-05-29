@@ -33,7 +33,7 @@ public class RectangleDemo {
     } // end main method
 
     public static void printRectangleData(Rectangle rectangle) {
-        System.out.println("The rectangle is " + rectangle.geLength() + " long " + rectangle.getWidth() + " wide");
+        System.out.println("The rectangle is " + rectangle.getLength() + " long " + rectangle.getWidth() + " wide");
     } // end printHouseData method
 
 } // end RectangleDemo class

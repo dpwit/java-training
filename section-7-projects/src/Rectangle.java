@@ -14,7 +14,7 @@ public class Rectangle {
         numRectangles++;
     }
 
-    public double geLength() {
+    public double getLength() {
         return length;
     }
 
