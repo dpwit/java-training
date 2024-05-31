@@ -33,7 +33,5 @@ public class FileInputFun {
             System.out.println("Error in the input file, entry is not a number!");
         } // end try-catch
 
-
-
     } // end main method
 } // end FileInputFun class
