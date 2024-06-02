@@ -66,9 +66,9 @@ public class Proj8_2_CircleFile {
                 String printedFormattedArea = pdf.format(c.area());
 
                 for(Circle pc: circleArrayList) {
-                    pw.println(pc.getRadius());
-                    pw.println(printedFormattedCircumference);
-                    pw.println(printedFormattedArea);
+                    pw.println("Radius is: " + pc.getRadius());
+                    pw.println("Circumference is: " + printedFormattedCircumference);
+                    pw.println("Area is: " + printedFormattedArea);
                     pw.println();
                 }
 
