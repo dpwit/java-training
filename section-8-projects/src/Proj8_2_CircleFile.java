@@ -46,9 +46,6 @@ public class Proj8_2_CircleFile {
 
     public static void printCircles(ArrayList<Circle> circleArrayList) {
         // enhanced for loop
-
-
-
         for(Circle c: circleArrayList) {
 
             DecimalFormat df = new DecimalFormat("#.00");
