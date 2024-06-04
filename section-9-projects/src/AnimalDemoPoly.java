@@ -10,6 +10,18 @@ public class AnimalDemoPoly {public static void main(String[] args) {
     animals[4] = new Cat("Tom", 75);
     animals[5] = new Tiger("Tony", 1000);
 
+    Animal temp = new Dog("Oakley", 150);
+
+    //IMovable for Abstract and Interface example
+    Dog myDog = new Dog("Rover",70);
+    System.out.println(myDog.move());
+    System.out.println();
+
+    Cat myCat = new Cat("Purr",35);
+    System.out.println(myCat.move());
+    System.out.println();
+    // end IMovable example
+
     printAnimals(animals);
 
     } // end main method
