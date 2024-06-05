@@ -1,0 +1,40 @@
+For this Java challenge, I'll create a problem that's engaging and suitable for someone who has just finished the beginner course. The goal is to complete it within 2 hours.
+
+Challenge: "Banking System"
+
+You are tasked with creating a simple banking system that allows users to perform basic transactions. The system should have the following features:
+
+1. User Registration: Users can register with their name and account number.
+2. Deposit: Users can deposit money into their accounts.
+3. Withdrawal: Users can withdraw money from their accounts (up to a maximum limit).
+4. Balance Inquiry: Users can check their current balance.
+
+Requirements:
+1. Create a BankAccount class with the following methods:
+
+i. register(String name, int accountNumber): registers a new user with the given name and account number.
+ii. deposit(int amount): adds the given amount to the user's account balance.
+iii. withdraw(int amount): subtracts the given amount from the user's account balance (up to a maximum limit).
+iv. getBalance(): returns the current account balance.
+
+2. Create a Main class that contains the main method, which allows users to interact with the banking system.
+
+Constraints:
+
+1. Use only basic Java concepts learned in the beginner course (e.g., variables, data types, control structures, methods).
+2. No external libraries or frameworks are allowed.
+3. The program should be able to handle a maximum of 5 users (you can hardcode these).
+
+Tips and Hints:
+
+1. Use object-oriented programming principles to design the BankAccount class.
+2. Implement validation for deposit and withdrawal amounts to prevent negative balances.
+3. Consider using an array or list to store user information.
+
+Judging Criteria:
+1. Correct implementation of the required methods in the BankAccount class.
+2. Proper handling of user registration, deposits, withdrawals, and balance inquiries.
+3. Code organization, readability, and commenting ( bonus points for good comments!).
+
+Time Limit: 2 hours
+Time taken:
