@@ -22,7 +22,7 @@ public class BankDetails {
         } // end if else
     } // end registerUser method
 
-    // get Account method searches for the account number.
+    // getAccount method searches for the account number.
     public BankAccount getAccount(String accountNumber) {
         // enhanced for loop
         for(BankAccount account : accounts) {

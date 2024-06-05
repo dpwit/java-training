@@ -1,5 +1,6 @@
-// Define the BankAccount class
+import java.text.DecimalFormat;
 
+// Define the BankAccount class
 public class BankAccount {
     private String accountName;
     private String accountNumber;
@@ -10,14 +11,18 @@ public class BankAccount {
     public BankAccount(String accountName, String accountNumber) {
         this.accountName = accountName;
         this.accountNumber = accountNumber;
-        this.accountBalance = 0.0;
+        this.accountBalance = 0.00;
     } // end ctor
 
     // deposit method to add the given amount to the user's account balance.
     public void deposit(double amount) {
+        DecimalFormat df = new DecimalFormat("#.00");
+        String formattedAmount = df.format(amount);
+
+
         if(amount > 0) {
             accountBalance += amount; // += is the same as accountBalance = accountBalance + amount.
-            System.out.println("You successfully deposited: " + "£" + amount);
+            System.out.println("You successfully deposited: " + "£" + formattedAmount);
             System.out.println("Your new account balance is: " + "£" + accountBalance);
         }
         else {
