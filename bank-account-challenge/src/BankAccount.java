@@ -16,6 +16,7 @@ public class BankAccount {
 
     // deposit method to add the given amount to the user's account balance.
     public void deposit(double amount) {
+        // added in DecimalFormat to format the double value to 2 decimal places.
         DecimalFormat df = new DecimalFormat("#.00");
         String formattedAmount = df.format(amount);
 
